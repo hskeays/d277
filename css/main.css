@@ -18,7 +18,8 @@ body {
 .main {
     display: flex;
     flex-direction: column; /* or row, depending on your layout */
-    height: calc(100vh - 130px);
+    min-height: 100vh;
+    padding-bottom: 20px;
 }
 
 /* Navigation +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
