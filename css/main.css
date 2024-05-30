@@ -10,15 +10,15 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: rgb(35, 40, 40);
 }
 
-/* Navigation */
-
+/* Navigation +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 .nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 50px;
+    padding: 5px 40px;
     background-color: rgb(0, 47, 68);
 }
 
@@ -26,12 +26,13 @@ body {
     width: 60px;
     height: auto;
     border-radius: 10px;
-    margin: 5px 0px 1px 0px;
+    margin: 5px 20px 0px 0px;
 }
 
 .nav-links {
     display: flex;
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .nav a {
@@ -44,24 +45,111 @@ body {
     scale: 1.05;
 }
 
-/* Main */
-
-.hero-index {
-    overflow: hidden;
+/* Section one +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.s1 {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: -2px;
-
-    background-image: url("/images/penn.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
+    align-items: center;
+    padding: 50px 40px;
+    gap: 20px;
+    background-color: rgb(0, 47, 68);
 }
 
-/* Footer */
+.s1-content {
+    max-width: 500px;
+    padding: 10px;
+}
 
+.s1-img {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.s1 img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgb(0 0 0 / .5);
+}
+
+.s1 h1 {
+    font-size: 48px;
+    color: #F9FAF7;
+    font-weight: 1000;
+    margin-bottom: 25px;
+}
+
+.s1 p {
+    font-size: 18px;
+    color: #E5E7EB;
+    padding-bottom: 15px;
+}
+
+.s1-slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    
+  }
+  
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 12px;
+    color: white;
+    background-color: rgba(0,0,0,0.3);
+    font-weight: bold;
+    font-size: 12px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+  
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.caption {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+  
+.numbertext {
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+  
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* Section two +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/* Footer ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 .footer {
     background-color: rgb(0, 47, 68);;
     display: flex;
