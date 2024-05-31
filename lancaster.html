@@ -9,23 +9,46 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <title>Lancaster</title>
     <link rel="stylesheet" href="./css/main.css" />
     <script src="./js/main.js" defer></script>
   </head>
   <body>
     <header>
-      <nav class="nav">
-        <div class="nav-logo">
-          <a href="./index.html"><img src="./images/penn-logo.png" /></a>
-        </div>
-        <div class="nav-links">
-          <a href="./index.html">Home</a>
-          <a href="./harrisburg.html">Harrisburg</a>
-          <a href="./philadelphia.html">Philadelphia</a>
-          <a href="./pittsburgh.html">Pittsburgh</a>
-          <a href="./lancaster.html">Lancaster</a>
-        </div>
+      <nav>
+        <ul class="sidebar">
+          <li onclick="hideSidebar()">
+            <a href="#"><i class="bx bx-x-circle"></i></a>
+          </li>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./harrisburg.html">Harrisburg</a></li>
+          <li><a href="./philadelphia.html">Philadelphia</a></li>
+          <li><a href="./pittsburgh.html">Pittsburgh</a></li>
+          <li><a href="./lancaster.html">Lancaster</a></li>
+        </ul>
+        <ul>
+          <li>
+            <a href="./index.html"><img src="./images/penn-logo.png" /></a>
+          </li>
+          <li class="hideOnMobile"><a href="./index.html">Home</a></li>
+          <li class="hideOnMobile">
+            <a href="./harrisburg.html">Harrisburg</a>
+          </li>
+          <li class="hideOnMobile">
+            <a href="./philadelphia.html">Philadelphia</a>
+          </li>
+          <li class="hideOnMobile">
+            <a href="./pittsburgh.html">Pittsburgh</a>
+          </li>
+          <li class="hideOnMobile"><a href="./lancaster.html">Lancaster</a></li>
+          <li class="hideOnDesktop" onclick="showSidebar()">
+            <a href="#"><i class="bx bx-menu"></i></a>
+          </li>
+        </ul>
       </nav>
     </header>
 
@@ -34,10 +57,11 @@
         <div class="s1-content">
           <h1>Lancaster</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam eius
-            dolorem quis! Nemo ducimus animi provident, accusantium earum
-            facilis saepe, delectus ad eius repellendus quaerat, voluptatibus ut
-            fuga optio tempore?
+            Lancaster, in southeastern Pennsylvania, is known for its Amish
+            community and rich agricultural heritage. The city features
+            attractions like the Central Market, the Fulton Theatre, and Amish
+            farmlands. Lancaster blends historical charm with a vibrant arts
+            scene and picturesque countryside.
           </p>
         </div>
         <div class="s1-slideshow-container">
@@ -74,8 +98,8 @@
         <br />
       </section>
 
-      <aside class="aside">
-        <div class="aside-content">
+      <section class="s2">
+        <div class="s2-content">
           <h1>Fun facts</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam eius
@@ -84,7 +108,7 @@
             fuga optio tempore?
           </p>
         </div>
-      </aside>
+      </section>
     </main>
 
     <footer class="footer">

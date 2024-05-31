@@ -18,45 +18,98 @@ body {
 .main {
     display: flex;
     flex-direction: column; /* or row, depending on your layout */
-    min-height: 100vh;
-    padding-bottom: 20px;
+    min-height: calc(100vh - 105px);
 }
 
 /* Navigation +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-.nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+nav {
     padding: 5px 40px;
     background-color: rgb(0, 47, 68);
 }
 
-.nav-logo img {
-    width: 60px;
-    height: auto;
+nav li:first-child {
+    margin-right: auto;
+}
+
+nav img {
+    height: 50px;
     border-radius: 10px;
     margin: 5px 20px 0px 0px;
 }
 
-.nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(169, 169, 169, 0.2);
+    backdrop-filter: blur(10px);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
-.nav a {
+.sidebar li {
+    width: 100%;
+    padding: 10px;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0px 10px;
     text-decoration: none;
     color: #F9FAF7;
+    display: flex;
+    align-items: center;
 }
 
-.nav a:hover {
-    color: #3882F6;
-    scale: 1.05;
+nav a:hover {
+    color: rgb(88, 123, 219);
+}
+
+.bx {
+    font-size: 25px;
+}
+
+@media(max-width: 700px) {
+    .hideOnMobile {
+        display: none;
+    }
+}
+
+@media(max-width: 400px) {
+    .sidebar {
+        width: 100%;
+    }
+}
+
+@media(min-width: 700px) {
+    .hideOnDesktop {
+        display: none;
+    }
 }
 
 /* Section one +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 .s1 {
-    flex: 1;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -67,8 +120,8 @@ body {
 }
 
 .s1-content {
-    max-width: 500px;
-    padding: 10px;
+    max-width: 650px;
+    min-height: 180px;
 }
 
 .s1-img {
@@ -94,14 +147,12 @@ body {
 .s1 p {
     font-size: 18px;
     color: #E5E7EB;
-    padding-bottom: 15px;
 }
 
 .s1-slideshow-container {
     max-width: 1000px;
     position: relative;
     margin: auto;
-    
   }
   
 .prev, .next {
@@ -122,7 +173,7 @@ body {
   
 .next {
     right: 0;
-    border-radius: 3px 0 0 3px;
+    border-radius: 5px 0 0 5px;
 }
   
 .prev:hover, .next:hover {
@@ -141,8 +192,10 @@ body {
   
 .numbertext {
     color: rgb(255, 255, 255);
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 5px;
     font-size: 12px;
-    padding: 8px 12px;
+    padding: 6px 10px;
     position: absolute;
     top: 0;
 }
@@ -157,8 +210,8 @@ body {
     to {opacity: 1}
 }
 
-/* Aside +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-.aside {
+/* Section two +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.s2 {
     flex: 1;
     display: flex;
     flex-wrap: wrap;
@@ -169,19 +222,19 @@ body {
     background-color: rgb(200, 200, 200);
 }
 
-.aside-content {
+.s2-content {
     max-width: 500px;
     padding: 10px;
 }
 
-.aside h1 {
+.s2 h1 {
     font-size: 36px;
     color: rgb(0, 0, 0);
     font-weight: 1000;
     margin-bottom: 25px;
 }
 
-.aside p {
+.s2 p {
     font-size: 16px;
     color: rgb(0, 0, 0);
     padding-bottom: 15px;
@@ -193,8 +246,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    bottom: 0;
+    
     width: 100%;
     gap: 20px;
     color: #F9FAF7;
@@ -202,9 +254,9 @@ body {
     padding: 10px 10px;
 }
 
-.footer img {
-    height:20px;
-    width: auto;
+.footer img, .footer a {
+    height: 20px;
+    width: 20px;
 }
 
 .footer img:hover {
