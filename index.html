@@ -6,10 +6,6 @@
     <meta name="author" content="Howard Keays" />
     <link rel="icon" href="./images/penn-logo.png" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
@@ -21,17 +17,18 @@
     <header>
       <nav>
         <ul class="sidebar">
-          <li onclick="hideSidebar()">
+          <li class="sidebar-top" onclick="hideSidebar()">
+            <a href="./index.html">Home</a>
             <a href="#"><i class="bx bx-x-circle"></i></a>
           </li>
-          <li><a href="./index.html">Home</a></li>
           <li><a href="./harrisburg.html">Harrisburg</a></li>
           <li><a href="./philadelphia.html">Philadelphia</a></li>
           <li><a href="./pittsburgh.html">Pittsburgh</a></li>
           <li><a href="./lancaster.html">Lancaster</a></li>
         </ul>
+
         <ul>
-          <li>
+          <li id="nav-logo">
             <a href="./index.html"><img src="./images/penn-logo.png" /></a>
           </li>
           <li class="hideOnMobile"><a href="./index.html">Home</a></li>
@@ -102,16 +99,51 @@
       </section>
       <section class="s2">
         <div class="s2-main-content">
-          <h1>Fun facts</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam eius
-            dolorem quis! Nemo ducimus animi provident, accusantium earum
-            facilis saepe, delectus ad eius repellendus quaerat, voluptatibus ut
-            fuga optio tempore?
-          </p>
+          <h2>Fun facts:</h2>
+          <ol>
+            <li><strong>Nickname:</strong> The Keystone State</li>
+            <li><strong>Statehood:</strong> 1787</li>
+            <li><strong>Capital:</strong> Harrisburg</li>
+            <li><strong>State bird:</strong> Ruffed Grouse</li>
+            <li><strong>State flower:</strong> Mountain Laurel</li>
+          </ol>
         </div>
         <aside class="aside">
-          <h1>ASIDE</h1>
+          <h2>Popular Attractions</h2>
+          <ul>
+            <li>
+              <a
+                href="https://www.nps.gov/inde/index.htm"
+                target="_blank"
+                rel="noopener noreferrer"
+                >- Independence National Historical Park</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.hersheypark.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >- Hersheypark</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.fallingwater.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >- Fallingwater</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.visitphilly.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >- Visit Philadelphia</a
+              >
+            </li>
+          </ul>
         </aside>
       </section>
     </main>

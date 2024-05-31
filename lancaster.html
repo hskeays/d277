@@ -6,10 +6,6 @@
     <meta name="author" content="Howard Keays" />
     <link rel="icon" href="./images/penn-logo.png" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
@@ -21,17 +17,18 @@
     <header>
       <nav>
         <ul class="sidebar">
-          <li onclick="hideSidebar()">
+          <li class="sidebar-top" onclick="hideSidebar()">
+            <a href="./index.html">Home</a>
             <a href="#"><i class="bx bx-x-circle"></i></a>
           </li>
-          <li><a href="./index.html">Home</a></li>
           <li><a href="./harrisburg.html">Harrisburg</a></li>
           <li><a href="./philadelphia.html">Philadelphia</a></li>
           <li><a href="./pittsburgh.html">Pittsburgh</a></li>
           <li><a href="./lancaster.html">Lancaster</a></li>
         </ul>
+
         <ul>
-          <li>
+          <li id="nav-logo">
             <a href="./index.html"><img src="./images/penn-logo.png" /></a>
           </li>
           <li class="hideOnMobile"><a href="./index.html">Home</a></li>
@@ -95,19 +92,44 @@
           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
           <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-        <br />
       </section>
 
       <section class="s2">
-        <div class="s2-content">
-          <h1>Fun facts</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam eius
-            dolorem quis! Nemo ducimus animi provident, accusantium earum
-            facilis saepe, delectus ad eius repellendus quaerat, voluptatibus ut
-            fuga optio tempore?
-          </p>
+        <div class="s2-main-content">
+          <h2>Fun facts:</h2>
+          <ol>
+            <li><strong>PLACEHOLDER:</strong> PLACEHOLDER</li>
+            <li><strong>PLACEHOLDER:</strong> PLACEHOLDER</li>
+            <li><strong>PLACEHOLDER:</strong> PLACEHOLDER</li>
+            <li><strong>PLACEHOLDER:</strong> PLACEHOLDER</li>
+            <li><strong>PLACEHOLDER:</strong> PLACEHOLDER</li>
+          </ol>
         </div>
+        <aside class="aside">
+          <h2>Popular Attractions</h2>
+          <ul>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                >- PLACEHOLDER</a
+              >
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                >- PLACEHOLDER</a
+              >
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                >- PLACEHOLDER</a
+              >
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                >- PLACEHOLDER</a
+              >
+            </li>
+          </ul>
+        </aside>
       </section>
     </main>
 

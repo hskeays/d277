@@ -7,10 +7,8 @@
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100%;
-    background-color: rgb(35, 40, 40);
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+    min-height: 100vh;
+    font-family: Verdana, sans-serif;
     line-height: 1.5em;
 }
 
@@ -22,18 +20,14 @@ body {
 
 /* Navigation +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 nav {
-    padding: 5px 40px;
-    background-color: rgb(0, 47, 68);
-}
-
-nav li:first-child {
-    margin-right: auto;
+    padding: 2px 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 nav img {
     height: 50px;
     border-radius: 10px;
-    margin: 5px 20px 0px 0px;
 }
 
 .sidebar {
@@ -47,8 +41,13 @@ nav img {
     height: 100vh;
     width: 250px;
     z-index: 999;
-    background-color: rgba(169, 169, 169, 0.2);
+    padding: 6px 10px;
+    background-color: rgba(100, 100, 100, 0.6);
     backdrop-filter: blur(10px);
+}
+
+.sidebar-top {
+    display: flex;
 }
 
 .sidebar li {
@@ -58,6 +57,12 @@ nav img {
 
 .sidebar a {
     width: 100%;
+    color: rgb(240, 240, 240);
+}
+
+.bx {
+    margin-left: auto;
+    font-size: 25px;
 }
 
 nav ul {
@@ -66,6 +71,10 @@ nav ul {
     align-items: center;
     width: 100%;
     list-style: none;
+}
+
+#nav-logo {
+    margin-right: auto;
 }
 
 nav li {
@@ -78,17 +87,14 @@ nav a {
     height: 100%;
     padding: 0px 10px;
     text-decoration: none;
-    color: #F9FAF7;
-    
+    color: rgb(0, 47, 68);
 }
 
 nav a:hover {
+    transition: .15s;
     color: rgb(19, 122, 171);
 }
 
-.bx {
-    font-size: 25px;
-}
 
 @media(max-width: 700px) {
     .hideOnMobile {
@@ -115,12 +121,13 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     flex: 1;
-    padding: 50px 40px;
-    gap: 20px;
+    padding: 50px 30px;
+    gap: 30px;
     background-color: rgb(0, 47, 68);
 }
 
 .s1-content {
+    flex: 1 1 450px;
     max-width: 650px;
     min-height: 180px;
 }
@@ -133,13 +140,13 @@ nav a:hover {
 
 .s1 img {
     width: 100%;
-    max-width: 650px;
+    max-width: 800px;
     border-radius: 5px;
     box-shadow: 0 5px 10px rgb(0 0 0 / .5);
 }
 
 .s1 h1 {
-    color: rgb(255, 255, 255);
+    color: rgb(240, 240, 240);
     font-size: 48px;
     font-weight: 1000;
     margin-bottom: 25px;
@@ -147,14 +154,21 @@ nav a:hover {
 
 .s1 p {
     font-size: 18px;
-    color: rgb(255, 255, 255);
+    color: rgb(240, 240, 240);
 }
 
 .s1-slideshow-container {
+    flex: 1 0 1;
     position: relative;
     margin: auto;
-    max-width: 1000px;
+    max-width: 1200px;
   }
+
+.slides {
+    width: 100%;
+    height: 100%;
+    
+}
   
 .prev, .next {
     cursor: pointer;
@@ -166,7 +180,7 @@ nav a:hover {
     color: white;
     background-color: rgba(0,0,0,0.3);
     font-weight: bold;
-    font-size: 12px;
+    font-size: 16px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
@@ -186,7 +200,7 @@ nav a:hover {
     position: absolute;
     bottom: 8px;
     width: 100%;
-    color: rgb(255, 255, 255);
+    color: rgb(240, 240, 240);
     font-size: 15px;
     text-align: center;
 }
@@ -196,7 +210,7 @@ nav a:hover {
     top: 0;
     border-radius: 5px;
     padding: 6px 10px;
-    color: rgb(255, 255, 255);
+    color: rgb(240, 240, 240);
     background-color: rgba(0,0,0,0.2);
     font-size: 12px;
 }
@@ -218,45 +232,82 @@ nav a:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 20px 40px;
-    gap: 20px;
-    background-color: rgb(200, 200, 200);
+    padding: 30px;
+    gap: 30px;
+    background-color: rgb(255, 255, 255);
 }
 
 .s2-main-content {
-    flex: 1;
-    padding: 10px;
-    background-color: red;
+    flex: 1 1 370px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgb(0, 47, 68);
 }
 
-.s2 h1 {
-    font-size: 36px;
-    color: rgb(0, 0, 0);
+.s2 h2 {
+    margin-top: 20px;
+    font-size: 32px;
+    color: rgb(240, 240, 240);
     font-weight: 1000;
     margin-bottom: 25px;
+    line-height: 1.1em;
 }
 
-.s2 p {
-    font-size: 16px;
-    color: rgb(0, 0, 0);
-    padding-bottom: 15px;
+.s2 li {
+    padding: 0px 10px;
+    font-size: 14px;
+    color: rgb(240, 240, 240);
+    line-height: 2em;
+}
+
+ol {
+    list-style: none;
 }
 
 .aside {
-    background-color: green;
-    flex: 1;
+    flex: 1 1 370px;
+    padding: 20px;
+    border-radius: 5px;
+    min-height: 269px;
+    background-color: rgb(0, 47, 68);
+}
+
+.aside h2 {
+    padding: 0px 0px 0px 10px;
+    line-height: 1.1em;
+}
+
+aside li {
+    list-style-type: none;
+    padding: 0px 10px;
+}
+
+aside a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0px 10px;
+    text-decoration: none;
+    color: rgb(19, 122, 171);
+}
+
+aside a:hover {
+    transition: .15s;
+    color: rgb(240, 240, 240);
 }
 
 /* Footer ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 .footer {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 10px;
+    padding: 10px 30px;
     gap: 20px;
-    color: rgb(255, 255, 255);
+    color: rgb(240, 240, 240);
     background-color: rgb(0, 47, 68);
     font-size: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .footer img, .footer a {
