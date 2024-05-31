@@ -14,7 +14,7 @@ body {
 
 .main {
     display: flex;
-    flex-direction: column; /* or row, depending on your layout */
+    flex-direction: column;
     min-height: calc(100vh - 105px);
 }
 
@@ -295,6 +295,14 @@ aside a {
 
 aside a:hover {
     transition: .15s;
+    color: rgb(240, 240, 240);
+}
+
+aside a:visited {
+    color: rgb(19, 122, 171);
+}
+
+aside a:visited:hover {
     color: rgb(240, 240, 240);
 }
 
