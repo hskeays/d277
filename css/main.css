@@ -177,7 +177,7 @@ nav a:hover {
     width: auto;
     margin-top: -22px;
     padding: 12px;
-    color: white;
+    color: rgba(240, 240, 240, 0.8);
     background-color: rgba(0,0,0,0.3);
     font-weight: bold;
     font-size: 16px;
@@ -196,12 +196,14 @@ nav a:hover {
 }
 
 .caption {
-    padding: 8px 12px;
+    padding: 4px 12px;
     position: absolute;
     bottom: 8px;
     width: 100%;
-    color: rgb(240, 240, 240);
-    font-size: 15px;
+    color: rgba(240, 240, 240, 0.8);
+    background-color: rgba(0,0,0,0.4);
+    font-size: .8em;
+    line-height: 1.2em;
     text-align: center;
 }
   
@@ -210,7 +212,7 @@ nav a:hover {
     top: 0;
     border-radius: 5px;
     padding: 6px 10px;
-    color: rgb(240, 240, 240);
+    color: rgba(240, 240, 240, 0.8);
     background-color: rgba(0,0,0,0.2);
     font-size: 12px;
 }
