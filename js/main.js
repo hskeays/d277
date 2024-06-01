@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.classList.add('dark-mode');
       icon.classList.remove('bxs-bulb');
       icon.classList.add('bx-bulb');
-      icon.style.color = 'rgb(180, 180, 180)';
+      icon.style.color = 'rgb(235, 235, 235)';
       darkModeToggle.checked = true;
   } else {
       document.body.classList.remove('dark-mode');
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
           document.body.classList.add('dark-mode');
           icon.classList.remove('bxs-bulb');
           icon.classList.add('bx-bulb');
-          icon.style.color = "rgb(180, 180, 180)";
+          icon.style.color = "rgb(235, 235, 235)";
           localStorage.setItem('darkMode', 'enabled');
       } else {
           document.body.classList.remove('dark-mode');

@@ -134,8 +134,8 @@ nav a:hover {
 /* Dark mode styles */
 .dark-mode {
     --bg-color: rgb(57,60,63);
-    --text-color: rgb(180, 180, 180);
-    --highlight-color: rgb(220, 220, 220);
+    --text-color: rgb(235, 235, 235);
+    --highlight-color: rgb(235, 235, 235);
 }
 
 .switch-container {
@@ -363,6 +363,8 @@ ol {
     padding: 0px 10px;
     font-size: 1em;
     color: rgb(240, 240, 240);
+    /* dark mode*/
+    color: var(--text-color);
 }
 
 .aside {
