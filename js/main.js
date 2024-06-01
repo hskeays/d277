@@ -31,3 +31,28 @@ function hideSidebar() {
   const sidebar = document.querySelector(".sidebar");
   sidebar.style.display = "none";
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const darkModeToggle = document.getElementById('darkModeToggle');
+
+  const darkMode = localStorage.getItem('darkMode');
+
+  if (darkMode === 'enabled') {
+      document.body.classList.add('dark-mode');
+      darkModeToggle.checked = true;
+  } else {
+      document.body.classList.remove('dark-mode');
+      darkModeToggle.checked = false;
+  }
+
+  darkModeToggle.addEventListener('change', () => {
+      if (darkModeToggle.checked) {
+          document.body.classList.add('dark-mode');
+          localStorage.setItem('darkMode', 'enabled');
+      } else {
+          document.body.classList.remove('dark-mode');
+          localStorage.setItem('darkMode', 'disabled');
+      }
+  });
+});
+
