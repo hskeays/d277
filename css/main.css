@@ -20,7 +20,7 @@ body {
 
 /* Navigation +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 nav {
-    padding: 5px 20px;
+    padding: 10px 20px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     /* dark mode*/
@@ -199,7 +199,7 @@ nav a:hover {
 .s1 img {
     width: 100%;
     max-width: 800px;
-    border-radius: 5px;
+    border-radius: 5px 5px 0px 0px ;
     box-shadow: 0 5px 10px rgb(0 0 0 / .5);
 }
 
@@ -244,13 +244,13 @@ nav a:hover {
     font-weight: bold;
     font-size: 1.1em;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
+    border-radius: 0px 3px 3px 0px;
     user-select: none;
 }
   
 .next {
     right: 0;
-    border-radius: 5px 0 0 5px;
+    border-radius: 5px 0px 0px 5px;
 }
   
 .prev:hover, .next:hover {
@@ -258,9 +258,10 @@ nav a:hover {
 }
 
 .caption {
-    padding: 4px 12px;
-    position: absolute;
-    bottom: 8px;
+    padding: 8px 12px;
+    float: bottom;
+    margin-top: -8px;
+    border-radius: 0px 0px 5px 5px;
     width: 100%;
     color: rgba(240, 240, 240, 0.8);
     background-color: rgba(0,0,0,0.4);
@@ -304,7 +305,7 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px;
+    padding: 40px 30px;
     background-color: rgb(255, 255, 255);
     /* dark mode*/
     background-color: var(--bg-color);
@@ -418,14 +419,13 @@ aside a:visited:hover {
 }
 
 /* Section three +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-
 .s3 {
     flex: 1;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 30px;
+    padding: 40px 30px;
     background-color: rgb(160, 160, 160);
 }
 
@@ -435,7 +435,7 @@ aside a:visited:hover {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    max-width: 1400px;
+    max-width: 1200px;
 }
 
 .s3-main-content {
@@ -468,10 +468,10 @@ aside a:visited:hover {
     color: var(--text-color);
 }
 
+/* Table ++++++++++++++++++++++++++++++*/
 table {
     width: 100%;
     border-collapse: collapse;
-    
 }
 
 th, td {
@@ -515,6 +515,70 @@ td {
 @media(max-width: 380px) {
     th, td {
         font-size: .5em;
+    }
+}
+
+/* Section four ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.s4 {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 30px;
+    /* dark mode*/
+    background-color: var(--bg-color);
+}
+
+form {
+    flex: 1 1 500px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgb(0, 47, 68);
+    min-height: 500px;
+    box-shadow: 0 5px 10px rgb(0 0 0 / .5);
+}
+
+label {
+    color: var(--text-color);
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid rgb(160, 160, 160);
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 1px solid rgb(160, 160, 160);
+    border-radius: 5px;
+    /* dark mode*/
+    background-color: var(--bg-color);
+    color: var(--highlight-color);
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    color: rgb(235, 235, 235);
+    background-color: rgb(21, 139, 194);
+}
+
+#message, #subject, #email {
+    /* dark mode*/
+    background-color: var(--bg-color);
+    color: var(--highlight-color);
+}
+
+@media(max-width: 380px) {
+    .s4 label {
+        font-size: .9em;
     }
 }
 
