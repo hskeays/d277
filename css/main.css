@@ -316,7 +316,7 @@ nav a:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
     max-width: 1200px;
 }
 
@@ -435,7 +435,7 @@ aside a:visited:hover {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    max-width: 800px;
+    max-width: 1400px;
 }
 
 .s3-main-content {
