@@ -365,7 +365,7 @@ th {
     /* dark mode*/
     background-color: var(--bg-color);
     /* dark mode*/
-    color: var(--text-color);
+    color: var(--highlight-color);
 }
 
 td {
