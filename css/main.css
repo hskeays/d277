@@ -413,7 +413,7 @@ aside a:visited:hover {
         font-size: 1.5em;
     }
     .s2 li {
-        font-size: .8em;
+        font-size: .9em;
     }
 }
 
@@ -500,6 +500,9 @@ td {
 @media(max-width: 460px) {
     .s3 h2 {
         font-size: 1.5em;
+    }
+    .s3 li {
+        font-size: .9em;
     }
 }
 
