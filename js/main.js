@@ -34,23 +34,37 @@ function hideSidebar() {
 
 document.addEventListener('DOMContentLoaded', () => {
   const darkModeToggle = document.getElementById('darkModeToggle');
-
+  const icon = document.getElementById('bulb');
   const darkMode = localStorage.getItem('darkMode');
 
+  // Initial state setup
   if (darkMode === 'enabled') {
       document.body.classList.add('dark-mode');
+      icon.classList.remove('bxs-bulb');
+      icon.classList.add('bx-bulb');
+      icon.style.color = 'rgb(180, 180, 180)';
       darkModeToggle.checked = true;
   } else {
       document.body.classList.remove('dark-mode');
+      icon.classList.remove('bx-bulb');
+      icon.classList.add('bxs-bulb');
+      icon.style.color = "rgb(0, 47, 68)";
       darkModeToggle.checked = false;
   }
 
+  // Event listener for checkbox change
   darkModeToggle.addEventListener('change', () => {
       if (darkModeToggle.checked) {
           document.body.classList.add('dark-mode');
+          icon.classList.remove('bxs-bulb');
+          icon.classList.add('bx-bulb');
+          icon.style.color = "rgb(180, 180, 180)";
           localStorage.setItem('darkMode', 'enabled');
       } else {
           document.body.classList.remove('dark-mode');
+          icon.classList.remove('bx-bulb');
+          icon.classList.add('bxs-bulb');
+          icon.style.color = 'rgb(0, 47, 68)';
           localStorage.setItem('darkMode', 'disabled');
       }
   });
