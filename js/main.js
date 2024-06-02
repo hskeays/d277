@@ -68,14 +68,15 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-function validateForm(event) {
-  event.preventDefault();
-  var email1 = document.getElementById("email").value;
-  var email2 = document.getElementById("emailVerify").value;
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  var email = document.getElementById('email').value;
+  var emailVerify = document.getElementById('emailVerify').value;
+  var errorMessage = document.getElementById('error-message');
 
-  if (email1 !== email2) {
-    alert("Emails do not match. Please verify.");
-    return false;
+  if (email !== emailVerify) {
+    event.preventDefault();
+    errorMessage.textContent = 'Email addresses do not match.';
+  } else {
+    errorMessage.textContent = '';
   }
-  this.submit();
-}
+});

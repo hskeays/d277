@@ -605,6 +605,10 @@ label {
     margin-top: 10px;
 }
 
+.error-message {
+    color: var(--text-color);
+}
+
 input[type="text"], input[type="email"], textarea {
     width: 100%;
     padding: 10px;
@@ -635,11 +639,6 @@ input[type="submit"]:hover {
     background-color: var(--bg-color);
     color: var(--highlight-color);
 }
-
-input:-internal-autofill-selected {
-    background-color: #ff0000 !important; /* Set the background color to white */
-}
-
 
 @media(max-width: 500px) {
     .s4 h2 {
