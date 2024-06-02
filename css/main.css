@@ -63,6 +63,7 @@ nav img {
 }
 
 .bx {
+    flex: 1;
     margin-left: auto;
     font-size: 1.4em;
 }
@@ -151,7 +152,6 @@ nav a:hover {
     justify-content: center;
     width: 22px;
     height: 22px;
-    border-radius: 50px;
 }
 
 .switch input { 
@@ -160,8 +160,14 @@ nav a:hover {
     height: 0;
 }
 
+#bulb {
+    font-size: 24px;
+    padding: 10px;
+    transform: translate(-20%, -8%);
+}
+
 #bulb:hover {
-    scale: 1.02;
+    font-size: 26px;
     transition: .1s;
 }
 
