@@ -79,5 +79,3 @@ function validateForm(event) {
   }
   this.submit();
 }
-
-document.getElementById("contactForm").addEventListener("submit", validateForm);
