@@ -238,16 +238,78 @@
 
       <section class="s4">
         <form
-          action="mailto:example@example.com"
+          id="contactForm"
+          action="/.netlify/functions/submitForm"
           method="post"
-          enctype="text/plain"
+          enctype="application/x-www-form-urlencoded"
         >
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
+          <h2>Contact Form</h2>
+          <div class="name-fields">
+            <div>
+              <label for="firstName">First Name:</label>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                placeholder="First Name *"
+                required
+                autocomplete="given-name"
+              />
+            </div>
+            <div>
+              <label for="lastName">Last Name:</label>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                placeholder="Last name *"
+                required
+                autocomplete="family-name"
+              />
+            </div>
+          </div>
+          <div class="email-fields">
+            <div>
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email *"
+                required
+                autocomplete="email"
+              />
+            </div>
+            <div>
+              <label for="emailVerify">Verify Email:</label>
+              <input
+                type="email"
+                id="emailVerify"
+                name="emailVerify"
+                placeholder="Confirm email *"
+                required
+                autocomplete="email"
+              />
+            </div>
+          </div>
           <label for="subject">Subject:</label>
-          <input type="text" id="subject" name="subject" required />
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="Subject *"
+            required
+            autocomplete="subject"
+          />
           <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="10" required></textarea>
+          <textarea
+            id="message"
+            name="message"
+            rows="10"
+            placeholder="Type your message here"
+            required
+            autocomplete="message"
+          ></textarea>
           <input type="submit" value="Send Email" />
         </form>
       </section>

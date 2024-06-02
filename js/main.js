@@ -37,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const icon = document.getElementById('bulb');
   const darkMode = localStorage.getItem('darkMode');
 
-  // Initial state setup
   if (darkMode === 'enabled') {
       document.body.classList.add('dark-mode');
       icon.classList.remove('bxs-bulb');
@@ -52,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
       darkModeToggle.checked = false;
   }
 
-  // Event listener for checkbox change
   darkModeToggle.addEventListener('change', () => {
       if (darkModeToggle.checked) {
           document.body.classList.add('dark-mode');
@@ -70,3 +68,47 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+function validateForm(event) {
+  event.preventDefault();
+  var email1 = document.getElementById("email").value;
+  var email2 = document.getElementById("emailVerify").value;
+
+  if (email1 !== email2) {
+    alert("Emails do not match. Please verify.");
+    return false;
+  }
+  this.submit();
+}
+
+document.getElementById("contactForm").addEventListener("submit", validateForm);
+
+exports.handler = async (event, context) => {
+  if (event.httpMethod !== 'POST') {
+    return {
+      statusCode: 405,
+      body: JSON.stringify({ error: 'Method Not Allowed' })
+    };
+  }
+
+  const formData = JSON.parse(event.body);
+
+  // Process form data (send email, save to database, etc.)
+  // Example: sending an email
+  const { firstName, lastName, email, subject, message } = formData;
+  const emailBody = `
+    First Name: ${firstName}\n
+    Last Name: ${lastName}\n
+    Email: ${email}\n
+    Subject: ${subject}\n
+    Message: ${message}\n
+  `;
+
+  // Send email using a service like SendGrid, Nodemailer, etc.
+  // Example:
+  // sendEmail(emailBody);
+
+  return {
+    statusCode: 200,
+    body: JSON.stringify({ message: 'Form submitted successfully' })
+  };
+};
