@@ -43,13 +43,17 @@ nav img {
     height: 100vh;
     width: 250px;
     z-index: 999;
-    padding: 6px 10px;
+    padding: 10px 20px;
     background-color: rgba(100, 100, 100, 0.6);
     backdrop-filter: blur(10px);
 }
 
 .sidebar-top {
     display: flex;
+}
+
+#sidebar-close {
+    text-align: end;
 }
 
 .sidebar li {
