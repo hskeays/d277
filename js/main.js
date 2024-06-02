@@ -24,12 +24,12 @@ function showSlides(n) {
 
 function showSidebar() {
   const sidebar = document.querySelector(".sidebar");
-  sidebar.style.display = "flex";
+  sidebar.classList.add("visible");
 }
 
 function hideSidebar() {
   const sidebar = document.querySelector(".sidebar");
-  sidebar.style.display = "none";
+  sidebar.classList.remove("visible");
 }
 
 document.addEventListener('DOMContentLoaded', () => {

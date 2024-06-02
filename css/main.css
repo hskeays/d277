@@ -33,7 +33,7 @@ nav img {
 }
 
 .sidebar {
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
@@ -46,6 +46,14 @@ nav img {
     padding: 10px 20px;
     background-color: rgba(100, 100, 100, 0.6);
     backdrop-filter: blur(10px);
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar.visible {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .sidebar-top {
@@ -127,7 +135,7 @@ nav a:hover {
     }
 }
 
-/* Dark mode slider +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/* Dark mode toggle +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 /* Light mode*/
 :root {
@@ -352,6 +360,7 @@ nav a:hover {
 }
 
 .s2 .bx {
+    transform: translate(-20%, 20%);
     cursor: default;
 }
 
