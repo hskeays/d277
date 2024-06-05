@@ -205,7 +205,6 @@ nav a:hover {
 .s1-content {
     flex: 1 1 450px;
     max-width: 650px;
-    min-height: 180px;
 }
 
 .s1-img {
@@ -222,10 +221,12 @@ nav a:hover {
 }
 
 .s1 h1 {
+    float: left;
     color: rgb(240, 240, 240);
     font-size: 3em;
     font-weight: 1000;
-    margin-bottom: 30px;
+    padding-right: 15px;
+    padding-bottom: 15px;
     /* dark mode*/
     color: var(--text-color);
 }
@@ -277,7 +278,6 @@ nav a:hover {
 
 .caption {
     padding: 8px 12px;
-    float: bottom;
     margin-top: -8px;
     border-radius: 0px 0px 5px 5px;
     width: 100%;
